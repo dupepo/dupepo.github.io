@@ -1,24 +1,35 @@
-/* Book Container */
+Youtube code
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    background-color: powderblue;
+}
+
+/* Book */
 .book {
+    border: 1px solid black;
     position: relative;
     width: 350px;
     height: 500px;
-    transition: transform 0.5s;
 }
 
-/* The Paper Element handles the 3D rotation */
 .paper {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    
-    /* Crucial for 3D depth and keeping children in 3D space */
     perspective: 1500px;
-    transform-style: preserve-3d;
-    transform-origin: left center;
-    transition: transform 0.5s;
 }
 
 .front,
@@ -29,21 +40,16 @@
     height: 100%;
     top: 0;
     left: 0;
-    
-    /* Hides the reverse side so elements don't bleed through */
-    backface-visibility: hidden; 
-    border: 1px solid black; /* Gives the pages a defined edge */
+    transform-origin: left;
+    transition: transform 0.5s;
 }
 
 .front {
-    z-index: 2;
+    z-index: 1;
 }
 
-/* Pre-rotate the back of the page so it's upside down/backwards 
-   until the paper flips over */
 .back {
-    z-index: 1;
-    transform: rotateY(180deg); 
+    z-index: 0;
 }   
 
 .front-content,
@@ -55,17 +61,42 @@
     align-items: center;
 }
 
-/* Flip the ENTIRE paper, not just the faces */
-.paper.flipped {
-    transform: rotateY(-180deg);
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-100deg);
 }
 
-/* Paper stack order (Z-index management when normal) */
-#p1 { z-index: 3; }
-#p2 { z-index: 2; }   
-#p3 { z-index: 1; }   
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+}
 
-/* Dynamically fix Z-index when flipped so the book stacks correctly */
-#p1.flipped { z-index: 1; }
-#p2.flipped { z-index: 2; }
-#p3.flipped { z-index: 3; }
+button:focus {
+    outline: none;
+}
+
+button:hover i{
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color:gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}   
+
+#p3 {
+    z-index: 1;
+}   
