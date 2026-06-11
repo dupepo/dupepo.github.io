@@ -1,4 +1,3 @@
-Youtube code
 * {
     margin: 0;
     padding: 0;
@@ -17,10 +16,10 @@ body {
 
 /* Book */
 .book {
-    border: 1px solid black;
     position: relative;
     width: 350px;
     height: 500px;
+    transition: transform 0.5s;
 }
 
 .paper {
@@ -46,6 +45,8 @@ body {
 
 .front {
     z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid powerblue;
 }
 
 .back {
@@ -61,10 +62,14 @@ body {
     align-items: center;
 }
 
+.back-content {
+    transform: rotateY(180deg);
+}
+
 /* Paper flip effect */
 .flipped .front,
 .flipped .back {
-    transform: rotateY(-100deg);
+    transform: rotateY(-180deg);
 }
 
 /* Controller Buttons */
@@ -73,6 +78,7 @@ button {
     background-color: transparent;
     cursor: pointer;
     margin: 10px;
+    transition: transform 0.5s;
 }
 
 button:focus {
