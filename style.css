@@ -96,17 +96,17 @@ i {
 
 /* Paper stack order */
 #p1 {
-    z-index: 4;
+    z-index: 3;
 }
 
 #p2 {
-    z-index: 3;
-}   
-
-#p3 {
     z-index: 2;
 }   
 
-#p4 {
+#p3 {
     z-index: 1;
+}   
+
+#p4 {
+    z-index: 0;
 }

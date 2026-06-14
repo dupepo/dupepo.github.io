@@ -12,6 +12,14 @@ const paper4 = document.querySelector("#p4");
 prevBtn.addEventListener("click", goPrevPage);
 nextBtn.addEventListener("click", goNextPage);
 
+document.addEventListener("keydown", function(event) {
+    if(event.key === "ArrowRight") {
+        goNextPage();
+    } else if(event.key === "ArrowLeft") {
+        goPrevPage();
+    }
+});
+
 // Business Logic
 let currentLocation = 1;
 let numOfPapers = 4;
