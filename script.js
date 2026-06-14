@@ -10,6 +10,7 @@ const paper4 = document.querySelector("#p4");
 const paper5 = document.querySelector("#p5");
 const paper6 = document.querySelector("#p6");
 const paper7 = document.querySelector("#p7");
+const paper8 = document.querySelector("#p8");
 
 // Event Listener
 prevBtn.addEventListener("click", goPrevPage);
@@ -25,7 +26,7 @@ document.addEventListener("keydown", function(event) {
 
 // Business Logic
 let currentLocation = 1;
-let numOfPapers = 7;
+let numOfPapers = 8;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
@@ -76,6 +77,10 @@ function goNextPage() {
             case 7:
                 paper7.classList.add("flipped");
                 paper7.style.zIndex = 7;
+                break;
+            case 8:
+                paper8.classList.add("flipped");
+                paper8.style.zIndex = 8;
                 closeBook(false);
                 break;
             default:
@@ -121,6 +126,11 @@ function goPrevPage() {
                 openBook();
                 paper7.classList.remove("flipped");
                 paper7.style.zIndex = 1;
+                break;
+            case 9:
+                openBook();
+                paper8.classList.remove("flipped");
+                paper8.style.zIndex = 0;
                 break;
             default:
                 throw new Error("unkown state");
