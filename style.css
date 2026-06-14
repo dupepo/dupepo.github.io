@@ -1,5 +1,3 @@
-@import url("https://fonts.adobe.com/fonts/late-serif-variable");
-
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +10,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    font-family: "late-serif-variable", serif;
-    font-variation-settings: "wght" 400, "wdth" 100;
+    font-family: sans-serif;
     background-color: #F5E8AA;
 }
 
