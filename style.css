@@ -134,10 +134,3 @@ i {
     justify-content: center;
     align-items: center;
 }
-
-#f1 img {
-    width: 180px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-}
