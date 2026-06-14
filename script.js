@@ -96,41 +96,41 @@ function goPrevPage() {
             case 2:
                 closeBook(true);
                 paper1.classList.remove("flipped");
-                paper1.style.zIndex = 7;
+                paper1.style.zIndex = 8;
                 break;
             case 3:
                 paper2.classList.remove("flipped");
-                paper2.style.zIndex = 6;
+                paper2.style.zIndex = 7;
                 break;
             case 4:
                 openBook();
                 paper3.classList.remove("flipped");
-                paper3.style.zIndex = 5;
+                paper3.style.zIndex = 6;
                 break;
             case 5:
                 openBook();
                 paper4.classList.remove("flipped");
-                paper4.style.zIndex = 4;
+                paper4.style.zIndex = 5;
                 break;
             case 6:
                 openBook();
                 paper5.classList.remove("flipped");
-                paper5.style.zIndex = 3;
+                paper5.style.zIndex = 4;
                 break;
             case 7:
                 openBook();
                 paper6.classList.remove("flipped");
-                paper6.style.zIndex = 2;
+                paper6.style.zIndex = 3;
                 break;
             case 8: 
                 openBook();
                 paper7.classList.remove("flipped");
-                paper7.style.zIndex = 1;
+                paper7.style.zIndex = 2;
                 break;
             case 9:
                 openBook();
                 paper8.classList.remove("flipped");
-                paper8.style.zIndex = 0;
+                paper8.style.zIndex = 1;
                 break;
             default:
                 throw new Error("unkown state");
