@@ -141,3 +141,18 @@ i {
     object-fit: cover;
     border-radius: 10px;
 }
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.team img {
+    width: 320px;
+}
+
+.team span {
+    font-size: 28px;
+    font-weight: 500;
+}
